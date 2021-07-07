@@ -41,7 +41,7 @@ console.log(names);
 const greater = [...pokémon].filter(pok => pok.id>99).map( pok => pok.name);
 console.log(greater);
 //     an array with just the names of the pokémon whose only type is poison
-const poison = [...pokémon].filter( pok => pok.types.includes("poison")).map(pok => pok.name);
+const poison = [...pokémon].filter(pok => pok.types.length === 1).filter( pok => pok.types.includes("poison")).map(pok => pok.name);
 console.log(poison);
 //     an array containing just the first type of all the pokémon whose second type is "flying"
 const fly = [...pokémon].filter( pok => pok.types[1]==="flying" ).map( pok => pok.name);
