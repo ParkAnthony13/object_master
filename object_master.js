@@ -44,8 +44,8 @@ console.log(greater);
 const poison = [...pokémon].filter(pok => pok.types.length === 1).filter( pok => pok.types.includes("poison")).map(pok => pok.name);
 console.log(poison);
 //     an array containing just the first type of all the pokémon whose second type is "flying"
-const fly = [...pokémon].filter( pok => pok.types[1]==="flying" ).map( pok => pok.name);
+const fly = [...pokémon].filter( pok => pok.types[1]==="flying" ).map( pok => pok.types[0]);
 console.log(fly);
 //     a count of the number of pokémon that are "normal" type
-const normal = [...pokémon].filter( pok => pok.types.includes("normal")).map(pok => pok.name);
+const normal = [...pokémon].filter( pok => pok.types.includes("normal")).length;
 console.log(normal);
